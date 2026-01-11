@@ -1,2 +1,13 @@
-// TODO: Ini adalah titik masuk aplikasi, setup Express, Middleware, dan Server Listener disini
-const test = "lorem ipsum dolor sit amet consectetur adipiscing elit jjjjjjj"
+const express = require('express');
+const todoRoutes = require('./app/routes/todoRoutes');
+
+const app = express();
+
+app.use(express.json());
+
+app.use('/api', todoRoutes);
+
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server berjalan di http://localhost:${PORT}/api/todos`);
+});
