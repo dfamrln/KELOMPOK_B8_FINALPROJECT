@@ -1,6 +1,7 @@
 const express = require('express');
 const todoRoutes = require('./app/routes/todoRoutes');
 const userRoutes = require('./app/routes/index');   // const index
+const sequelize = require('./config/database');     // const database
 
 const app = express();
 
