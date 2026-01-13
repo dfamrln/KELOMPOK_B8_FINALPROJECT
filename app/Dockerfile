@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # import image node versi 18 alpine
 FROM node:18-alpine
 
@@ -19,18 +18,3 @@ EXPOSE 2562
 
 # jalankan aplikasi
 CMD ["npm", "start"]
-=======
-FROM node:18-alpine
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install --production
-
-COPY . .
-
-EXPOSE 3000
-
-CMD ["node", "app.js"]
->>>>>>> 7125d3e05be5b6529849626280afb9309f57892f
