@@ -19,7 +19,7 @@ app.use((err, req, res, next) => {
     res.status(500).json({ error: 'Something went wrong!' });
 });     // msg error
 
-const PORT = 3000;
+const PORT = 2562;
 app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}/api/todos`);
 });
