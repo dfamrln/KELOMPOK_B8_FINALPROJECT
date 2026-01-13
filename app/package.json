@@ -1,7 +1,7 @@
 {
-  "name": "tulis-menfess",
-  "version": "1.1.0",
-  "description": "Anonymous Confession Wall",
+  "name": "todoku",
+  "version": "1.0.0",
+  "description": "Aplikasi Manajemen Tugas Sederhana",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

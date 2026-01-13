@@ -1,25 +1,28 @@
 const express = require('express');
-const todoRoutes = require('./app/routes/todoRoutes');
-const userRoutes = require('./app/routes/index');   // const index
-const sequelize = require('./config/database');     // const database
+const todoRoutes = require('./routes/todoRoutes');
+const db = require('./models');
 
 const app = express();
 
+// Middleware
 app.use(express.json());
 
-app.use('/api/todos', todoRoutes);  // api todos
-app.use('/api/users', userRoutes);  // api users
+// Routes
+app.use('/api', todoRoutes);
 
+// Root endpoint
 app.get('/', (req, res) => {
     res.json({ message: 'API is running' });
-});     // msg running
+});
 
+// Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ error: 'Something went wrong!' });
-});     // msg error
+});
 
-const PORT = 2562;
+// Start server
+const PORT = process.env.APP_PORT || 2562;
 app.listen(PORT, () => {
-    console.log(`Server berjalan di http://localhost:${PORT}/api/todos`);
+    console.log(`✓ Server berjalan di port ${PORT}`);
 });
