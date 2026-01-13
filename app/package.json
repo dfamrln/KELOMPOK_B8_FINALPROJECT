@@ -1,7 +1,7 @@
 {
-  "name": "ToDoKu",
-  "version": "1.0",
-  "description": "Aplikasi Manajemen Tugas Sederhana",
+  "name": "todoku",
+  "version": "1.0.0",
+  "description": "Make Your Own To Do List",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
